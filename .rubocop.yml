@@ -1,0 +1,160 @@
+require:
+  - rubocop-performance
+  - rubocop-rails
+  - rubocop-rspec
+
+AllCops:
+  NewCops: enable
+  TargetRubyVersion: 3.1
+  Exclude:
+    - bin/*
+    - vendor/**/*
+    - coverage/**/*
+    - spec/rails_helper.rb
+    - "**/Guardfile"
+    - "**/Rakefile"
+    - "**/*.gemspec"
+    - lib/tasks/annotate_models.rake
+
+# Disabled, because this gives false positives.
+RSpec/Rails/InferredSpecType:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: true
+
+Layout/ArgumentAlignment:
+  Enabled: false
+
+Layout/FirstArrayElementIndentation:
+  EnforcedStyle: consistent
+
+Layout/FirstHashElementIndentation:
+  EnforcedStyle: consistent
+
+Layout/LineLength:
+  Max: 100
+
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+
+Lint/AmbiguousBlockAssociation:
+  AllowedMethods:
+    - change
+    - satisfy
+
+Metrics/AbcSize:
+  Exclude:
+    - db/migrate/*
+
+Metrics/BlockLength:
+  Exclude:
+    - spec/**/*
+    - lib/tasks/**/*
+    - app/admin/risk_templates.rb
+
+Metrics/ClassLength:
+  Enabled: false
+
+Metrics/MethodLength:
+  Max: 15
+  Exclude:
+    - db/migrate/*
+
+Naming/BlockForwarding:
+  EnforcedStyle: explicit
+
+Naming/MemoizedInstanceVariableName:
+  EnforcedStyleForLeadingUnderscores: required
+
+Naming/RescuedExceptionsVariableName:
+  PreferredName: exception
+
+Naming/VariableNumber:
+  Enabled: false
+
+Rails/CreateTableWithTimestamps:
+  Enabled: false
+
+Rails/HasManyOrHasOneDependent:
+  Enabled: false
+
+Rails/I18nLocaleAssignment:
+  Exclude:
+    - spec/**/*
+
+Rails/SkipsModelValidations:
+  Enabled: false
+
+RSpec/ContextWording:
+  Prefixes:
+    - when
+    - with
+    - without
+    - if
+    - unless
+    - for
+    - as
+
+RSpec/EmptyExampleGroup:
+  Exclude:
+    - spec/requests/**/*
+
+RSpec/ExampleLength:
+  Enabled: false
+
+RSpec/FilePath:
+  Exclude:
+    - spec/requests/**/*
+
+RSpec/LetSetup:
+  Enabled: false
+
+RSpec/MultipleMemoizedHelpers:
+  Enabled: false
+
+RSpec/NamedSubject:
+  Enabled: false
+
+RSpec/NestedGroups:
+  Max: 5
+
+RSpec/ScatteredSetup:
+  Enabled: false
+
+RSpec/VariableName:
+  AllowedPatterns:
+    - Authorization
+
+Style/AccessorGrouping:
+  Enabled: false
+
+Style/BlockDelimiters:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/FormatStringToken:
+  Enabled: false
+
+Style/HashSyntax:
+  EnforcedShorthandSyntax: never
+
+Style/IfUnlessModifier:
+  Enabled: false
+
+Style/LambdaCall:
+  Enabled: false
+
+Style/NumericLiterals:
+  Exclude:
+    - db/data_schema.rb
+
+Style/PercentLiteralDelimiters:
+  PreferredDelimiters:
+    "%i": "()"
+    "%w": "()"
+
+Rails/SaveBang:
+  Enabled: true
