@@ -22,8 +22,8 @@ gem 'bootsnap', require: false
 
 gem 'dotenv-rails', '~> 2.7', '>= 2.7.6', require: 'dotenv/rails-now'
 
-# gem 'rswag-api'
-# gem 'rswag-ui'
+gem 'rswag-api'
+gem 'rswag-ui'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -31,7 +31,7 @@ group :development, :test do
 
   gem 'factory_bot_rails', '~> 6.2', '>= 6.2.0', require: false
   gem 'rspec-rails', '~> 6.0.0'
-  # gem 'rswag-specs'
+  gem 'rswag-specs'
   gem 'shoulda-matchers', '~> 5.2', require: false
 
   gem 'rubocop', '~> 1.50.1'
