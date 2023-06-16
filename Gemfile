@@ -25,6 +25,7 @@ gem 'dotenv-rails', '~> 2.7', '>= 2.7.6', require: 'dotenv/rails-now'
 gem 'rswag-api'
 gem 'rswag-ui'
 
+# Dry-rb gems
 gem 'dry-initializer', '~> 3.1.0', '>= 3.1.1'
 gem 'dry-matcher', '~> 1.0', '>= 1.0.0'
 gem 'dry-monads', '~> 1.5'
@@ -51,6 +52,10 @@ group :development, :test do
   gem 'rubocop-performance', '~> 1.15'
   gem 'rubocop-rails', '~> 2.16', '>= 2.16.1'
   gem 'rubocop-rspec', '~> 2.13', '>= 2.13.2'
+
+  gem 'simplecov', '~> 0.21', '>= 0.21.2', require: false
+  gem 'simplecov-cobertura', '~> 2.1', '>= 2.1.0', require: false
+  gem 'webmock', '~> 3.14', '>= 3.14.2'
 
   gem 'annotate', '~> 3.1', require: false
 end
