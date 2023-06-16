@@ -25,6 +25,13 @@ gem 'dotenv-rails', '~> 2.7', '>= 2.7.6', require: 'dotenv/rails-now'
 gem 'rswag-api'
 gem 'rswag-ui'
 
+gem 'dry-initializer', '~> 3.1.0', '>= 3.1.1'
+gem 'dry-matcher', '~> 1.0', '>= 1.0.0'
+gem 'dry-monads', '~> 1.5'
+gem 'dry-struct', '~> 1.5', '>= 1.5.2'
+gem 'dry-types', '~> 1.5', '>= 1.5.1'
+gem 'dry-validation', '~> 1.10.0'
+
 # serializers / deserializers
 gem 'blueprinter', '~> 0.25', '>= 0.25.3'
 gem 'oj', '~> 3.13', '>= 3.13.21'
