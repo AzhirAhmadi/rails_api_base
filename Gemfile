@@ -25,11 +25,17 @@ gem 'dotenv-rails', '~> 2.7', '>= 2.7.6', require: 'dotenv/rails-now'
 gem 'rswag-api'
 gem 'rswag-ui'
 
+# serializers / deserializers
+gem 'blueprinter', '~> 0.25', '>= 0.25.3'
+gem 'oj', '~> 3.13', '>= 3.13.21'
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i(mri mingw x64_mingw)
+  gem 'pry', '~> 0.14', '>= 0.14.1'
 
   gem 'factory_bot_rails', '~> 6.2', '>= 6.2.0', require: false
+  gem 'faker'
   gem 'rspec-rails', '~> 6.0.0'
   gem 'rswag-specs'
   gem 'shoulda-matchers', '~> 5.2', require: false
