@@ -45,5 +45,5 @@ group :development, :test do
   gem 'rubocop-rails', '~> 2.16', '>= 2.16.1'
   gem 'rubocop-rspec', '~> 2.13', '>= 2.13.2'
 
-  gem 'annotate',      '~> 3.1', require: false
+  gem 'annotate', '~> 3.1', require: false
 end
