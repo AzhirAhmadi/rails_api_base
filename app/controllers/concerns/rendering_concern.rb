@@ -12,7 +12,9 @@ module RenderingConcern
   define_method json_renderer_method_name do |object, options|
     self.content_type = Mime[:json] if media_type.nil?
 
-    options[:root] = :data
+    options[:root] = :data unless object.is_a?(Error)
+    options[:root] = :error if object.is_a?(Error)
+
     render_as_json(object, options)
   end
 
