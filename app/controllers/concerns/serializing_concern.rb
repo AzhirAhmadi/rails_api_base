@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RenderingConcern
+module SerializingConcern
   extend ActiveSupport::Concern
 
   def self.json_renderer_method_name
