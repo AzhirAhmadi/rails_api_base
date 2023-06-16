@@ -3,4 +3,5 @@
 class ApplicationController < ActionController::API
   include SerializingConcern
   include ExceptionHandlingConcern
+  include RenderingConcern
 end
