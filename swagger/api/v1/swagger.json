@@ -1,0 +1,12 @@
+{
+  "openapi": "3.0.3",
+  "servers": [
+    {
+      "url": "http://localhost:3000/",
+      "description": "Development"
+    }
+  ],
+  "components": {
+    "schemas": {}
+  }
+}

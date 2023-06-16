@@ -8,14 +8,14 @@ Dir[File.expand_path('../spec/swagger/schemas/**/*.rb', __dir__)].each { |schema
 
 RSpec.configure do |config|
   # Specify the root folder where Swagger JSON files will be generated.
-  config.swagger_root = Rails.root.join('swagger').to_s
+  config.swagger_root = Rswag::SWAGGER_ROOT
 
   # Specify `json` as the format of the output file.
   config.swagger_format = :json
 
   # Define one or more Swagger documents and provide metadata for each one.
   config.swagger_docs = {
-    'api/v1/swagger.json' => {
+    'swagger.json' => {
       openapi: '3.0.3',
       servers: [
         {
