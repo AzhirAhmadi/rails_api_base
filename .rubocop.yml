@@ -15,6 +15,7 @@ AllCops:
     - "**/Rakefile"
     - "**/*.gemspec"
     - lib/tasks/annotate_models.rake
+    - config/**/*
 
 # Disabled, because this gives false positives.
 RSpec/Rails/InferredSpecType:
